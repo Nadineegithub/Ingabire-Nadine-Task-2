@@ -32,24 +32,9 @@ SQL> show pdbs;
 SQL> ALTER PLUGGABLE DATABASE orclpdb open;
 ALTER PLUGGABLE DATABASE orclpdb open
 *
-ERROR at line 1:
-ORA-65011: Pluggable database ORCLPDB does not exist.
-
-
-SQL> ALTER PLUGGABLE DATABASE xepdb open;
-ALTER PLUGGABLE DATABASE xepdb open
-*
-ERROR at line 1:
-ORA-65011: Pluggable database XEPDB does not exist.
-
-
 SQL> ALTER PLUGGABLE DATABASE xepdb1 open;
 ALTER PLUGGABLE DATABASE xepdb1 open
 *
-ERROR at line 1:
-ORA-65019: pluggable database XEPDB1 already open
-
-
 SQL> create pluggable database plsql_class2024db
   2  admin user pdbadmin identifies by admin
   3
@@ -81,7 +66,7 @@ C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\XEPDB1\USERS01.DBF
 
 SQL> create pluggable database plsql_class2024db
   2  admin user pdbadmin identified by admin
-  3  file_name_convert=('C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\pdbseed','C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\plsql_class2024');
+  3  file_name_convert=('C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\pdbseed','C:\APP\NADINE\PRODUCT\21C\ORADATA\XE\plsql_class2024');
 
 Pluggable database created.
 
@@ -97,7 +82,7 @@ SQL> alter pluggable database plsql_class2024db save state;
 
 Pluggable database altered.
 
-SQL> create user de_plsqlauca identified by Shema;
+SQL> create user de_plsqlauca identified by Nadine;
 
 User created.
 
@@ -127,10 +112,6 @@ clpdb\','D:\restricted\oracle21c\oradata\ORCL\ez_to_delete_pdb\'
   4  );
 create pluggable database ez_to_delete_pdb
 *
-ERROR at line 1:
-ORA-65011: Pluggable database ORCLPDB does not exist.
-
-
 SQL> create pluggable database de_to_delete_pdb
   2  from  PLSQL_CLASS2024DB
   3  file_name_convert=('C:\app\Nadine \product\21c\oradata\XE\PLSQL_CLASS2024\','C:\app\Nadine \product\21c\oradata\XE\de_to_delete_pdb\');
@@ -155,12 +136,7 @@ Pluggable database dropped.
 SQL>
 ```
 
-![1](https://github.com/user-attachments/assets/373ebc6c-d403-4866-bd1e-8b3839b7630a)
-![2](https://github.com/user-attachments/assets/adcbf00a-be06-4d40-a5c1-d8e41438e12b)
-![3](https://github.com/user-attachments/assets/c60dc9db-7e4f-40f5-8dd3-b8b48459495f)
-![4](https://github.com/user-attachments/assets/45bde1a4-2d97-4065-aee4-f5da4b3f8b67)
-![5](https://github.com/user-attachments/assets/dd121be2-62a2-49cf-a5f5-82f8a782f6f4)
-![6](https://github.com/user-attachments/assets/9f05260c-d80c-4873-9ecd-4bc7296f9f6a)
+
 
 ### 	ORACLE Screenshots
 ![01](https://github.com/user-attachments/assets/9d1b7164-b3f5-4bbf-b82a-f0fe45f347e4)
