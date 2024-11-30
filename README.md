@@ -2,7 +2,7 @@
 ```Microsoft Windows [Version 10.0.22631.4169]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Users\SHEMA>sqlplus sys as sysdba;
+C:\Users\Nadine>sqlplus sys as sysdba;
 
 SQL*Plus: Release 21.0.0.0.0 - Production on Thu Oct 3 17:53:08 2024
 Version 21.3.0.0.0
@@ -62,13 +62,13 @@ SQL> SELECT CON_ID,TABLESPACE_NAME,FILE_NAME
 FILE_NAME
 --------------------------------------------------------------------------------
          3 SYSTEM
-C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\XEPDB1\SYSTEM01.DBF
+C:\APP\Nadine\PRODUCT\21C\ORADATA\XE\XEPDB1\SYSTEM01.DBF
 
          3 SYSAUX
-C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\XEPDB1\SYSAUX01.DBF
+C:\APP\Nadine\PRODUCT\21C\ORADATA\XE\XEPDB1\SYSAUX01.DBF
 
          3 UNDOTBS1
-C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\XEPDB1\UNDOTBS01.DBF
+C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\XEPDB1\UNDOTBS01.DBF
 
 
     CON_ID TABLESPACE_NAME
@@ -76,12 +76,12 @@ C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\XEPDB1\UNDOTBS01.DBF
 FILE_NAME
 --------------------------------------------------------------------------------
          3 USERS
-C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\XEPDB1\USERS01.DBF
+C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\XEPDB1\USERS01.DBF
 
 
 SQL> create pluggable database plsql_class2024db
   2  admin user pdbadmin identified by admin
-  3  file_name_convert=('C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\pdbseed','C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\plsql_class2024');
+  3  file_name_convert=('C:\APP\Nadine \PRODUCT\21C\ORADATA\XE\pdbseed','C:\APP\SHEMA\PRODUCT\21C\ORADATA\XE\plsql_class2024');
 
 Pluggable database created.
 
@@ -133,7 +133,7 @@ ORA-65011: Pluggable database ORCLPDB does not exist.
 
 SQL> create pluggable database de_to_delete_pdb
   2  from  PLSQL_CLASS2024DB
-  3  file_name_convert=('C:\app\SHEMA\product\21c\oradata\XE\PLSQL_CLASS2024\','C:\app\SHEMA\product\21c\oradata\XE\de_to_delete_pdb\');
+  3  file_name_convert=('C:\app\Nadine \product\21c\oradata\XE\PLSQL_CLASS2024\','C:\app\Nadine \product\21c\oradata\XE\de_to_delete_pdb\');
 
 Pluggable database created.
 
@@ -144,7 +144,7 @@ ERROR at line 1:
 ORA-65020: pluggable database DE_TO_DELETE_PDB already closed
 
 
-SQL> alter pluggable database de_to_delete_pdb unplug into 'C:\app\SHEMA\product\21c\admin\XE\dpdump\DE_TO_DELETE_PDB.xml';
+SQL> alter pluggable database de_to_delete_pdb unplug into 'C:\app\Nadine\product\21c\admin\XE\dpdump\DE_TO_DELETE_PDB.xml';
 
 Pluggable database altered.
 
@@ -154,7 +154,6 @@ Pluggable database dropped.
 
 SQL>
 ```
-### SCREENSHOTS OF (creating, deleting the PDB, and Oracle Enterprise Manager dashboard).
 
 ![1](https://github.com/user-attachments/assets/373ebc6c-d403-4866-bd1e-8b3839b7630a)
 ![2](https://github.com/user-attachments/assets/adcbf00a-be06-4d40-a5c1-d8e41438e12b)
